@@ -17,7 +17,9 @@ generate_consensus_command_wtpoa = /u/home/a/akarlsbe/wtpoa-cns -t 16 -i new_fil
 
 
 
+interactive session: 
+qrsh -l h_data=24G
 
 # chmod +x contig_only_strain_assembly_wtdbg_shell_command_script.sh
 
-# qsub -m beas -cwd -V -N wtdbg_assembly -l h_data=48G,highp,time=24:00:00 contig_only_strain_assembly_wtdbg_shell_command_script.sh
+# qsub -m beas -cwd -V -N wtdbg_assembly -l h_data=12G,highp,time=24:00:00 /u/home/a/akarlsbe/scratch/Djoin/wtdbg_shell_scripts/contig_only_strain_assembly_wtdbg_shell_command_script.sh
