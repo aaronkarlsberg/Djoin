@@ -46,9 +46,7 @@ def ParseFiles(csvFile):
 
 
 csvFile_filepath_and_TaxID = 'strain_contig.csv'
-def ParseFiles(csvFile_filepath_and_TaxID):
+ParseFiles(csvFile_filepath_and_TaxID)
 
 
 # c.execute("INSERT INTO strain_contig_consensus_db VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (seqAttributes["TAXID"], seqAttributes["GENUSNAME"], seqAttributes["SPECIESNAME"], seqAttributes["STRAIN"], seqAttributes["DBNAME"], seqAttributes["FILEPATH"], seqAttributes["chromosome_count"], seqAttributes["avg_length_chromosomes"], seqAttributes["max_length_chromosomes"], seqAttributes["min_length_chromosomes"], seqAttributes["contig_count"], seqAttributes["avg_length_contig"], seqAttributes["max_length_contig"], seqAttributes["min_length_contig"], seqAttributes["mtDNA_count"], seqAttributes["avg_length_mtDNA"], seqAttributes["max_length_mtDNA"], seqAttributes["min_length_mtDNA"], seqAttributes["plasmid_count"], seqAttributes["avg_length_plasmids"], seqAttributes["max_length_plasmids"], seqAttributes["min_length_plasmids"]))
-
-
