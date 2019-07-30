@@ -29,6 +29,7 @@ with open(filePath.strip()) as f:
 			sum_contig_lengths += int(lengths)
 		avg_length = sum_contig_lengths / num_contigs
 	print(avg_length, min_length, max_length)
-	c.execute('''UPDATE strain_contig_consensus_db SET min_length_contig =?, max_length_contig =?, avg_length_contig =?, contig_count = ? WHERE STRAINTAXID=?''',(min_length, max_length, avg_length, num_contigs, strain_tax_id))
+	c.execute('''INSERT INTO strain_contig_consensus_db(min_length_contig, max_length_contig, avg_length_contig, contig_count, STRAINTAXID, FILEPATH) VALUES(?,?,?,?,?,?)''', (min_length, max_length, avg_length, num_contigs, strain_tax_id, filePath))
+	# c.execute('''UPDATE strain_contig_consensus_db SET min_length_contig =?, max_length_contig =?, avg_length_contig =?, contig_count = ? WHERE STRAINTAXID=?''',(min_length, max_length, avg_length, contig_count, strain_tax_id))
 	conn.commit()
 conn.close()
